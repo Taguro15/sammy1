@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurtSpace News</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            // Get all the buttons with class "readMoreBtn"
+            var readMoreButtons = document.querySelectorAll(".readMoreBtn");
+
+            // Loop through each button and attach a click event listener
+            readMoreButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    // Get the parent element of the button, which is the news item
+                    var newsItem = button.parentElement;
+
+                    // Get the news-content element inside the current news item
+                    var newsContent = newsItem.querySelector(".news-content");
+
+                    // Toggle the "hidden" class to show/hide the news-content
+                    newsContent.classList.toggle("hidden");
+
+                    // Change the button text based on the visibility of news-content
+                    if (newsContent.classList.contains("hidden")) {
+                        button.textContent = "Read More";
+                    } else {
+                        button.textContent = "Read Less";
+                    }
+                });
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Sammy</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="profile.html" class="dropbtn">Profile &#x25BE;</a><br>
+                <div class="dropdown-content">
+                    <a href="pictures.html">Pictures</a><br>
+                    <a href="videos.html">Videos</a>
+                </div>
+            </li>
+            <li class="news"><a href="news.html">News</a></li>
+        </ul>
+    </nav>
+    <h2>News <span>Flash</span></h2>
+    <main class="container">
+        <div class="news-feed">
+            <div class="news-item">
+                <img src="img/24.jpg" alt="News 1 Image">
+    <div class="news-content">
+        <h2>CELEBRATE TEACHER'S DAY THIS COMING OCTOBER 6, 2023</h2>
+        <p> Teacher's Day is a special occasion dedicated to honoring and appreciating the remarkable contributions of teachers.</p>
+        <button type="button" id="readMorebtn">Read More</button>
+        
+    </div>
+</div>
+<div class="news-item">
+    <img src="img/22.jpg" alt="News 2 Image">
+    <div class="news-content">
+        <h2>CELEBRATE MENTAL HEALTH DAYS THIS COMING OCTOBER 11, 2023</h2>
+        <p>World Mental Health Day</p>
+        <br><br><br>
+        <button type="button" id="readMorebtn">Read More</button>
+    </div>
+</div>
+<div class="news-item">
+    <img src="img/21.jpg" alt="News 2 Image">
+    <div class="news-content">
+        <h2>CONGRATULATIONS TO OUR NEWLY ELECTED CSP OFFICERS!!</h2>
+        <p>The College of Computing Studies (CCS) proudly presents the newly elected Computing Society of the Philippines (CSP) Officers of Ilocos Sur Polytechnic State College - Sta. Maria Campus A.Y. 2023-2024. Headed by the elected President</p>
+           <br><br>
+            <button type="button" id="readMorebtn">Read More</button>
+        </div>
+</div>
+<div class="news-item">
+    <img src="img/23.jpg" alt="News 2 Image">
+    <div class="news-content">
+        <h2>HAPPY BIRTHDAY TO OUR DEAREST DR. FRANCISCO N. DIVINA</h2>
+        <p>CCS faculty and staff surprise the campus administrator</p>
+           <br><br><br><br><br>  <br><br><br><br><br>   <br><br><br><br><br>   <br><br><br><br>
+            <button type="button" id="readMorebtn">Read More</button>
+        </div>
+</div>
+</div>
+</main>
+       
+    </div>
+    <button type="button" id="readMoreBtn">Read More</button>
+    <footer>
+        <p>&copy; 2023 CurtSpace. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
